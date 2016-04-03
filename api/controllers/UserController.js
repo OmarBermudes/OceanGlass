@@ -60,8 +60,8 @@ module.exports = {
 	update:function(req, res, next){
 		var userObj={
 			name : req.param('name'),
-			last_name : req.param('last_name'),
-			username : req.param('username'),
+			lastname : req.param('lastname'),
+			types : req.param('types'),
 			email : req.param('email')
 		}
 		User.update(req.param('id'), userObj, function userUpdated(err, user){

@@ -1,0 +1,19 @@
+<div class="container">
+	<% if(flash && flash.err) {%>
+	<ul class="alert alert-success">
+		<% Object.keys(flash.err).forEach(function(error){%>
+		<li> <%- JSON.stringify(flash.err[error])%></li>
+		<%})%>
+	</ul>
+	<%}%>
+	<form action="/product/create" method="POST" accept-charset="utf-8" class="form-signin" >
+		<label >Name:</label>
+		<input class="form-control" type="text" name="name" required>
+		<label >Type:</label>
+		<input class="form-control" type="number" name="types" required>
+		<label >Quantity:</label>
+		<input class="form-control" type="number" name="quantity" required>
+		<br/>
+		<input class="btn btn-primary" type="submit">
+	</form>
+</div>

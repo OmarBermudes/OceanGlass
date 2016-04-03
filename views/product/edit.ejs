@@ -1,0 +1,14 @@
+<div class="container">
+	<form action="/product/update/<%= product.id %>" method="POST" accept-charset="utf-8" class="form-signin" >
+		<label >Name:</label>
+		<input class="form-control" type="text" name="name" value="<%= product.name %>" required>
+		
+		<label >Type:</label>
+		<input class="form-control" type="number" name="types" value="<%= product.types %>" required>
+		<label >Qantity:</label>
+		<input class="form-control" type="number" name="quantity" value="<%= product.quantity %>" required>
+		<br/>
+		<input class="btn btn-primary" type="submit">
+
+	</form>
+</div>

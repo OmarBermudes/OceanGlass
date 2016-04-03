@@ -1,0 +1,25 @@
+<div class="container">
+	<h2>Products</h2>
+	<table class="table table-hover">
+		<th>Name</th>
+		<th>Type</th>
+		<th>Quantities</th>
+		<th colspan="2" class="text-center">Actions</th>
+		<% _.each(products, function(product) { %>
+		<tr>
+			<td> <%= product.name %></td>
+			<td> <%= product.types %></td>
+			<td> <%= product.quantity %></td>
+			<td> <a href="/product/show/<%= product.id %>" class="btn btn-sm btn-success">Details</a>
+			</td>
+			<td>
+				<form action="/product/destroy/<%= product.id %>" method="PSOT" accept-charset="utf-8">
+					<input type="hidden" name="_method" value="delete">
+					<input type="submit" class="btn btn-danger btn-sm" value="Eliminar">
+					<input type="hidden" name="_csrf" value="<%= _csrf%>">
+				</form>
+			</td>
+		</tr>
+		<%})%>
+	</table>
+</div>
