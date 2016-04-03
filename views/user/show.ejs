@@ -1,0 +1,13 @@
+<div class="container">
+	<h2>Users info</h2>
+	<ul>
+		<li> Name: <%= user.name %> </li>
+		<li> Lastname: <%= user.lastname %> </li>
+		<li> Email: <%= user.email %> </li>
+		<li> Type: <%= user.types %> </li>
+	</ul>
+
+	<form action="/user/edit/<%= user.id %>" method="POST" accepted-charset="utf-8">
+		<button type="submit" class="btn btn-success"> Edit </button>
+	</form>
+</div>

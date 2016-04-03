@@ -1,0 +1,25 @@
+<div class="container">
+	<% if(flash && flash.err) {%>
+	<ul class="alert alert-success">
+		<% Object.keys(flash.err).forEach(function(error){%>
+		<li> <%- JSON.stringify(flash.err[error])%></li>
+		<%})%>
+	</ul>
+	<%}%>
+	<form action="create" method="POST" accept-charset="utf-8" class="form-signin" >
+		<label >Name:</label>
+		<input class="form-control" type="text" name="name" required>
+		<label >Last Name:</label>
+		<input class="form-control" type="text" name="lastname" required>
+		<label >Type:</label>
+		<input class="form-control" type="number" name="types" required>
+		<label >Email:</label>
+		<input class="form-control" type="email" name="email" required>
+		<br/>
+		<label>Password:</label>
+		<input class="form-control" type="password" name="password" required>
+		<label>Password Confirmation:</label>
+		<input class="form-control" type="password" name="password_confirmation" required>
+		<input class="btn btn-primary" type="submit">
+	</form>
+</div>

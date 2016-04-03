@@ -1,0 +1,15 @@
+<div class="container">
+	<form action="/user/update/<%= user.id %>" method="POST" accept-charset="utf-8" class="form-signin" >
+		<label >Name:</label>
+		<input class="form-control" type="text" name="name" value="<%= user.name %>" required>
+		<label >Last Name</label>
+		<input class="form-control" type="text" name="lastname" value="<%= user.lastname %>" required>
+		<label >Type:</label>
+		<input class="form-control" type="number" name="types" value="<%= user.types %>" required>
+		<label >Email:</label>
+		<input class="form-control" type="email" name="email" value="<%= user.email %>" required>
+		<br/>
+		<input class="btn btn-primary" type="submit">
+
+	</form>
+</div>
